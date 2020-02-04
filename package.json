@@ -1,0 +1,30 @@
+{
+  "name": "mernTut2",
+  "version": "1.0.0",
+  "description": "MERN app implementing CRUD api from tutorials on blog.logrocket.com. <br> [Part 1](https://blog.logrocket.com/mern-stack-a-to-z-part-1/) <br> [Part 2](https://blog.logrocket.com/mern-stack-a-to-z-part-2/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sntnmjones/mernTut2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sntnmjones/mernTut2/issues"
+  },
+  "homepage": "https://github.com/sntnmjones/mernTut2#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,5 @@
+version: '3'
+services:
+  react:
+    build: node:alpine
+    entrypoint: ['npm', '-v']
