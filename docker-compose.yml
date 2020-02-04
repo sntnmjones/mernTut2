@@ -8,4 +8,6 @@ services:
     working_dir: /express
     volumes:
       - ./:/express
-    entrypoint: ['node', 'app']
+    command: npm install
+    command: npm run app
+    # entrypoint: ['node', 'run', 'app']
