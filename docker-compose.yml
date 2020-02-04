@@ -1,5 +1,11 @@
 version: '3'
 services:
-  react:
-    build: node:alpine
-    entrypoint: ['npm', '-v']
+  express:
+    image: node:alpine
+    restart: always
+    ports:
+      - '8082:8082'
+    working_dir: /express
+    volumes:
+      - ./:/express
+    entrypoint: ['node', 'app']
