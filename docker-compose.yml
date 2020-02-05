@@ -10,4 +10,13 @@ services:
       - ./:/express
     command: npm install
     command: npm run app
+  react:
+    image: node:alpine
+    restart: always
+    ports:
+      - '3001:3000'
+    working_dir: /react
+    volumes:
+      - ./my-app:/react
+    command: npm start
     # entrypoint: ['node', 'run', 'app']
