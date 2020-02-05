@@ -1,9 +1,20 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const app = express();
+var express = require('express');
+var connectDB = require('./config/db');
+var cors = require('cors');
 
 connectDB();
+var app = express();
+
+// enable cors
+app.use(cors({origin:true, credentials:true}));
+
+// init middleware
+app.use(express.json({extended:false}));
 
 app.get('/', (req, res) => res.send('Hello world!'));
-const port = process.env.PORT || 8082;
+
+var books = require('./routes/api/books');
+app.use('/api/books', books);
+var port = process.env.PORT || 8082;
 app.listen(port, () => console.log(`Server running on port ${port}`))
+module.exports = app;
