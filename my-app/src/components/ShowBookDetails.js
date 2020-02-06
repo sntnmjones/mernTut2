@@ -7,12 +7,13 @@ class showBookDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            book: {}
+            book: {},
+            test: { test1: "I'm working"}
         };
     }
 
     componentDidMount() {
-        // console.log("Print id: " + this.props.match.params.id);
+        console.log("Print id: " + this.props.match.params.id);
         axios
             .get('http://localhost:8082/api/books/' + this.props.match.params.id)
             .then(res => {
@@ -22,7 +23,7 @@ class showBookDetails extends Component {
                 })
             })
             .catch(err => {
-                console.log("Error from ShowBookDetails");
+                console.log("Error from ShowBookDetails: " + JSON.stringify(this.state.book));
             })
     };
 
